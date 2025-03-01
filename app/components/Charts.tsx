@@ -23,7 +23,21 @@ ChartJS.register(
   Legend
 );
 
-export const EngagementChart = ({ data }) => (
+interface ChartData {
+  labels: string[];
+  datasets: {
+    label: string;
+    data: number[];
+    borderColor: string;
+    backgroundColor: string;
+  }[];
+}
+
+interface EngagementChartProps {
+  data: ChartData;
+}
+
+export const EngagementChart = ({ data }: EngagementChartProps) => (
   <div className="bg-white rounded-lg shadow-sm p-6">
     <h3 className="text-lg font-semibold mb-4">Engagement Trends</h3>
     <Line
