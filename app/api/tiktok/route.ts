@@ -23,7 +23,9 @@ export async function GET(request: Request) {
       `https://tiktok-api23.p.rapidapi.com/api/user/info?uniqueId=${username}`,
       options
     );
+  
     const data: TikTokUser = await response.json();
+    console.log(data , 'data');
     return NextResponse.json(data);
   } catch (error) {
     return NextResponse.json(
