@@ -1,36 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TikTok Analytics Dashboard
+
+A modern web application built with Next.js that provides detailed analytics and insights for TikTok profiles. This tool allows users to analyze TikTok accounts, view follower statistics, and track engagement metrics.
+
+## Features
+
+- **Profile Analysis**: View detailed statistics for any public TikTok account
+- **Follower Insights**: Analyze follower demographics and engagement patterns
+- **Following List**: Explore accounts followed by the target user
+- **Post Analytics**: Track performance metrics for individual posts
+- **Real-time Data**: Get up-to-date statistics using the TikTok API
+- **Modern UI**: Clean and responsive interface with smooth animations
+
+## Tech Stack
+
+- **Frontend**: Next.js 13+ with App Router
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: React Icons
+- **API Integration**: RapidAPI TikTok API
+- **Type Safety**: TypeScript
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 16.x or later
+- npm or yarn
+- RapidAPI Key (for TikTok API access)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/tiktok-analytics.git
+cd tiktok-analytics
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Create a `.env` file in the root directory and add your RapidAPI key:
+```env
+RAPIDAPI_KEY=your_api_key_here
+```
+
+4. Start the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features in Detail
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Profile Overview
+- Total followers count
+- Total likes
+- Video count
+- Engagement rate calculation
 
-## Learn More
+### Follower Analysis
+- List of followers with profile details
+- Follower growth tracking
+- Engagement metrics per follower
 
-To learn more about Next.js, take a look at the following resources:
+### Following List
+- Grid view of followed accounts
+- Profile pictures and verification status
+- Account statistics and engagement metrics
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Post Analytics
+- Video thumbnails and duration
+- Like and view counts
+- Music information
+- Hashtag tracking
+- Engagement metrics per post
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## API Integration
 
-## Deploy on Vercel
+The application uses the TikTok API from RapidAPI to fetch:
+- User profile data
+- Follower information
+- Following list
+- Post details and statistics
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## UI/UX Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Responsive grid layouts
+- Smooth hover animations
+- Loading states
+- Error handling
+- Modern card designs
+- Interactive elements
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- TikTok API provided by RapidAPI
+- Icons from React Icons
+- Animation library from Framer Motion
+- Styling framework from Tailwind CSS
+
+## Security Note
+
+Remember to keep your API keys secure and never commit them directly to the repository. Use environment variables for sensitive information.

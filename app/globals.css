@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @theme {
   --font-sans: var(--font-geist-sans);
@@ -6,19 +8,114 @@
 }
 
 :root {
+  --primary: #3B82F6;
   --background: #ffffff;
-  --foreground: #171717;
+  --text: #000000;
+  --border: #E5E7EB;
+  --background-color: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply bg-white text-gray-900;
   }
 }
 
+@layer components {
+  .data-table {
+    @apply w-full;
+  }
+
+  .data-table-header {
+    @apply bg-gray-50 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+  }
+
+  .data-table-cell {
+    @apply px-6 py-4 whitespace-nowrap text-sm text-gray-500;
+  }
+
+  .data-table-row {
+    @apply hover:bg-gray-50;
+  }
+
+  .stat-card {
+    @apply bg-white rounded-lg shadow-sm p-6;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 4s linear infinite;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.data-grid {
+  @apply divide-y divide-gray-200;
+}
+
+.data-grid-header {
+  @apply bg-gray-50 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.data-grid-cell {
+  @apply px-6 py-4 whitespace-nowrap text-sm text-gray-500;
+}
+
+.chart-container {
+  @apply bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow duration-200;
 }
