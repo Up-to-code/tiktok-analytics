@@ -2,6 +2,13 @@
 
 A modern web application built with Next.js that provides detailed analytics and insights for TikTok profiles. This tool allows users to analyze TikTok accounts, view follower statistics, and track engagement metrics.
 
+## Screenshots
+
+### Dashboard Overview
+![Dashboard Overview](./public/screenshots.png)
+*Main dashboard showing key metrics and profile information*
+
+
 ## Features
 
 - **Profile Analysis**: View detailed statistics for any public TikTok account
