@@ -10,7 +10,7 @@ import { FollowingList } from './components/FollowingList';
 import { PostsList } from './components/PostsList';
 
 export default function TikTokAnalysisTool() {
-  const [username, setUsername] = useState<string>('ahmed_psychologyhub');
+  const [username, setUsername] = useState<string>('mbti_intj__');
   const [userData, setUserData] = useState<TikTokUser | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
