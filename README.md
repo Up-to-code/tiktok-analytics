@@ -128,3 +128,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Security Note
 
 Remember to keep your API keys secure and never commit them directly to the repository. Use environment variables for sensitive information.
+
+## Project links
+
+[Source](https://github.com/Up-to-code/tiktok-analytics) · [Issues](https://github.com/Up-to-code/tiktok-analytics/issues) · [Public project directory](https://github.com/qentrah/.github/blob/main/profile/PROJECTS.md)
